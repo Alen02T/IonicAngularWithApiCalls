@@ -26,4 +26,10 @@ ionic start FormulaApp blank --type=angular
         #ionic g page pages/movies
         #ionic g page pages/movieDetails
         #ionic g service services/movie
+*PAGES*
 
+#Drivers
+![image](https://user-images.githubusercontent.com/55515720/218537697-6b1fbe53-62c0-4863-b95d-1744eef0ff92.png)
+
+#Drivers:id
+![image](https://user-images.githubusercontent.com/55515720/218537736-ba804b97-a678-4be5-b90c-ce847b573aaa.png)
