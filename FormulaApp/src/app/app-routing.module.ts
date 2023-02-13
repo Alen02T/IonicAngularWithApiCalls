@@ -19,14 +19,12 @@ const routes: Routes = [
   },
   {
     path: 'drivers/:id',
-    loadChildren: () =>
-    import('./pages/drivers/drivers.module').then(
-      (m) => m.DriversPageModule)
-  },
-  {
-    path: 'driver-detail',
     loadChildren: () => import('./pages/driver-detail/driver-detail.module').then( m => m.DriverDetailPageModule)
   },
+  // {
+  //   path: 'driver-detail',
+  //   loadChildren: () => import('./pages/driver-detail/driver-detail.module').then( m => m.DriverDetailPageModule)
+  // },
 
 ];
 

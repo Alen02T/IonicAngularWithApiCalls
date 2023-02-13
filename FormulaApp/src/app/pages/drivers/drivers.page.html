@@ -1,9 +1,48 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>drivers</ion-title>
+    <ion-title>Drivers</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-content class="ion-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
 
-<ion-content>
+  <ion-card *ngFor="let driver of drivers;index as i" [routerLink]="'/drivers/'+driver.driverId" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{i+1}} {{driver.name}}</ion-card-title>
+      <ion-card-subtitle>{{driver.lastname}}</ion-card-subtitle>
+    </ion-card-header>
 
+    <ion-card-content>
+      {{driver.number}} | Wins {{driver.wins}} | Points {{driver.points}}
+      <span class="flag-icon flag-icon-{{driver.flag}}"></span>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+
+<!-- El tabs revienta el programa entero -->
+
+<!-- <ion-tabs>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="play-circle"></ion-icon>
+      Listen Now
+    </ion-tab-button>
+    <ion-tab-button tab="radio">
+      <ion-icon name="radio"></ion-icon>
+      Radio
+    </ion-tab-button>
+    <ion-tab-button tab="library">
+      <ion-icon name="library"></ion-icon>
+      Library
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon name="search"></ion-icon>
+      Search
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs> -->
